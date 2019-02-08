@@ -1,0 +1,34 @@
+extends:
+  - airbnb-base
+  - prettier
+plugins:
+  - prettier
+  - jest
+  - json
+  - markdown
+env:
+  node: true
+  jest: true
+  jest/globals: true
+rules:
+  no-underscore-dangle:
+    - error
+    - allow:
+        - _changed
+  no-param-reassign:
+    - error
+    - props: false
+  prettier/prettier:
+    - error
+    - arrowParens: always
+      singleQuote: true
+      trailingComma: all
+overrides:
+  - files:
+      - "**/*.md"
+    rules:
+      no-undef: 'off'
+      no-unused-vars: 'off'
+      no-console: 'off'
+      padded-blocks: 'off'
+      import/no-unresolved: 'off'

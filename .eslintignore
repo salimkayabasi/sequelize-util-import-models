@@ -1,0 +1,7 @@
+# Editor
+.idea/
+.vscode/
+
+# Temp folders
+coverage/
+node_modules/
